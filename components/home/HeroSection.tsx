@@ -1,6 +1,8 @@
+"use client";
 import React from 'react'
 import { Button } from '../ui/button';
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
 
 const HeroSection = () => {
     return (
@@ -17,7 +19,7 @@ const HeroSection = () => {
 
                         <div className='flex flex-col items-center gap-4 sm;flex-row md:justify-start'>
                             <Button className='rounded-full bg-black text-white'>Start Reading</Button>
-                            <Button variant={'outline'} className='rounded-full bg-white'>Explore Topics</Button>
+                            <Button variant={'outline'} className='rounded-full bg-white text-black'>Explore Topics</Button>
                         </div>
 
                         <div className='grid grid-cols-3 gap-4 pt-8 text-white md:mx-w-md'>
@@ -38,7 +40,12 @@ const HeroSection = () => {
                     {/* Image frame */}
                     <div className='mt-12 flex-1 md:mt-0'>
                         <div className={cn("relative mx-auto w-64 h-64 rounded-2xl overflow-hidden", "bg-gradien-to-br from-white/5 to-transparent", "border border-primary/20 backdrop-blur-lg", "shadow-2xl shadow-indigo-500/10")}>
-
+                            <Image
+                                src="https://images.pexels.com/photos/5052875/pexels-photo-5052875.jpeg"
+                                fill
+                                alt='hero image'
+                                className='object-cover'
+                            />
                         </div>
                     </div>
                 </div>
